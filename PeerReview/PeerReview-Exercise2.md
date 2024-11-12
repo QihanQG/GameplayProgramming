@@ -21,8 +21,8 @@ If you are in a rare situation where two peer-reviewers are on a single reposito
 
 ## Peer-reviewer Information
 
-* *name:* [your name here] 
-* *email:* [your @ucdavis.edu email address here]
+* *name:* [Qihan Guan] 
+* *email:* [qgguan@ucdavis.edu]
 
 ### Description ###
 
@@ -52,7 +52,7 @@ ___
 
 ### Stage 1 ###
 
-- [ ] Perfect
+- [x] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -60,12 +60,12 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
+The controller/screen draws a 5 by 5 unit cross in the center of the screen when draw_camera_logic is true.
 
 ___
 ### Stage 2 ###
 
-- [ ] Perfect
+- [x] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -73,12 +73,13 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
+ Every requirement is fulfilled. The controller draws a frame border box when draw_camera_logic is true. 
+ And if the player is touching the left edge box, the player would get pushed forward by the box edge. And exported the required variables.
 
 ___
 ### Stage 3 ###
 
-- [ ] Perfect
+- [x] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -86,69 +87,64 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
+The camera trails behind the players based on the follow_speed, and it also works during hyperspeed. 
+Exported variables like catchup_speed and leash_distance work as described based on my testing. The only problem I notice is that the movement is jittery, but that isn't listed as a requirement for Stage 3.
 
 ___
 ### Stage 4 ###
 
 - [ ] Perfect
-- [ ] Great
+- [x] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
-
+The camera leads the player in the direction of the player input. But it doesn't work during hyperspeed.
+And the student exported all of the required variables and they're all working as intended from my testing. However, the problem with the player's jittery movement persists from stage 3.
 ___
 ### Stage 5 ###
 
 - [ ] Perfect
 - [ ] Great
 - [ ] Good
-- [ ] Satisfactory
+- [x] Satisfactory
 - [ ] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
+The player can push the box in the direction they're moving, at both normal and hyper-speed when it touches the edges and corners. But the push_ratio is not implemented, so it's not accounted for in the movement calculation. 
+
+Another problem is the Speed-up Zone and the Push Zone are not distinguished. In the Push Zone(not touching the corners), the camera doesn't follow the player and simply acts the same as the Speed-up Zone. The student also didn't export any of the required variables.
+
+I mark this as "good" because there are 2 major flaws, a lack of zone distinction and push_ratio not being implemented. And some minor flaws like no exported variables. 
+
 ___
 # Code Style #
 
-
-### Description ###
-Check the scripts to see if the student code adheres to the dotnet style guide.
-
-If sections do not adhere to the style guide, please peramlink the line of code from Github and justify why the line of code has not followed the style guide.
-
-It should look something like this:
-
-* [description of infraction](https://github.com/dr-jam/ECS189L) - this is the justification.
-
-Please refer to the first code review template on how to do a permalink.
+The code adheres to the style guide of this class. It's well-structured,  easy to read, and no obsolete codes.
 
 
 #### Style Guide Infractions ####
 
+None.
+
 #### Style Guide Exemplars ####
 
-___
-#### Put style guide infractures ####
+There are many descriptive and helpful comments for the code. For example, it's full of them for the [Stage 3 script](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_smoothing_camera.gd#L15)
 
-___
 
 # Best Practices #
 
-### Description ###
+The code adheres to the best practices and the coding convention of GDScript. I don't see any Infractions other than a very minor indentation mistake.
 
-If the student has followed best practices (Unity coding conventions from the StyleGuides document) then feel free to point at these code segments as examplars. 
-
-If the student has breached the best practices and has done something that should be noted, please add the infraction.
-
-
-This should be similar to the Code Style justification.
 
 #### Best Practices Infractions ####
 
+One minor [indentaion](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L35) mistake for a comment.
+
 #### Best Practices Exemplars ####
+
+[The code is very well structured](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L21) It make it self-explanatory even without the comments.
+
